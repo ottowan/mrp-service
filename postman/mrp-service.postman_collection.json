@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "7113b3ee-5747-4603-b93a-33c02943507c",
+		"name": "mrp-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login : admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mrp-service.herokuapp.com/login",
+					"protocol": "https",
+					"host": [
+						"mrp-service",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login : test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test\",\r\n    \"password\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mrp-service.herokuapp.com/login",
+					"protocol": "https",
+					"host": [
+						"mrp-service",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh_token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTU1MjUyODAsImlkIjoiYWRtaW4iLCJvcmlnX2lhdCI6MTU5NTUyMTY4MH0.wgl0zLxvJky1zoTohslPA8fSDD3v_WtimPWwLMTWp7I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mrp-service.herokuapp.com/auth/refresh_token",
+					"protocol": "https",
+					"host": [
+						"mrp-service",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"auth",
+						"refresh_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTU1MjUyODAsImlkIjoiYWRtaW4iLCJvcmlnX2lhdCI6MTU5NTUyMTY4MH0.wgl0zLxvJky1zoTohslPA8fSDD3v_WtimPWwLMTWp7I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mrp-service.herokuapp.com/auth/hello",
+					"protocol": "https",
+					"host": [
+						"mrp-service",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"auth",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello unauthorize (user : test)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTU1MjU1MjYsImlkIjoidGVzdCIsIm9yaWdfaWF0IjoxNTk1NTIxOTI2fQ.1X3IJ1HQhPeKdjU92jmu9M_n8fw64w58X_TAu20QPkU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mrp-service.herokuapp.com/auth/hello",
+					"protocol": "https",
+					"host": [
+						"mrp-service",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"auth",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
